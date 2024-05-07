@@ -1,0 +1,41 @@
+---
+import "../styles/globals.css";
+import { Button } from "@/components/ui/button";
+
+interface Props {
+	title: string;
+	cover: string;
+	URL: string;
+}
+
+const { title, cover, URL } = Astro.props;
+---
+
+<div class="relative w-full h-full">
+	<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+		<div class="flex flex-col gap-10">
+			<div class="text-white text-8xl font-bold text-center w-full">{title}</div>
+            <div class="w-full flex justify-center">
+                <a href={URL}>
+                    <Button
+                        variant="outline"
+                        size="lg"
+                    >
+                        Explore
+                    </Button>
+                </a>
+            </div>
+		</div>
+	</div>
+	<div class="w-full h-full">
+		<a
+			href={URL}
+			class="w-full h-full"
+		>
+			<img
+				src={cover}
+				alt={title}
+			/>
+		</a>
+	</div>
+</div>
