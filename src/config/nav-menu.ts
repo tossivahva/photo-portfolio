@@ -3,31 +3,31 @@ import type { NavMenuConfig } from "@/types";
 export const NavMenu: NavMenuConfig = {
 	collectionNav: {
 		title: "Collections",
-        link: "/collections",
+		link: "/collections",
 		items: [
 			{
 				title: "Wedding",
-                description: "Wedding photography",
+				description: "My wedding photography. Photos from various weddings.",
 				link: "/collections/wedding",
 			},
 			{
 				title: "Portrait",
-                description: "Portrait photography",
+				description: "Portrait photography, including headshots and senior portraits.",
 				link: "/collections/portrait",
 			},
 			{
 				title: "Family",
-                description: "Family photography",
+				description: "Family photography. Family portraits and family events.",
 				link: "/collections/family",
 			},
 			{
 				title: "Events",
-                description: "Event photography",
+				description: "Event photography. Photos from various events.",
 				link: "/collections/events",
 			},
 			{
 				title: "Commercial",
-                description: "Commercial photography",
+				description: "Commercial photography. Photos from commercial shoots.",
 				link: "/collections/commercial",
 			},
 		],

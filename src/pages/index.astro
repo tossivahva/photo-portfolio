@@ -1,22 +1,14 @@
 ---
 import "@/styles/globals.css";
-import Starfield from "@/components/misc/Starfield.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Collection from "@/components/section/Collection.astro";
-import Navbar from "@/components/layout/navbar";
 ---
 
 <BaseLayout>
-    <Navbar client:load/>
-	<div class="bg-blue-400 relative h-[calc(100vh-100px)] flex justify-center">
-		<div class="container absolute w-full h-full m-auto">
-			<div class="w-full h-full flex justify-center items-center">
-				<h1 class="text-white text-8xl font-bold text-center">Professional photography</h1>
+	<div class="w-full h-full">
+		<div class="container">
+			<div class="w-full h-screen flex justify-center items-center">
+				<h1>Start</h1>
 			</div>
 		</div>
-		<Starfield />
-	</div>
-	<div>
-		<Collection URL="/" cover="./img/test-image-1.jpg" title="New Collection"/>
 	</div>
 </BaseLayout>
