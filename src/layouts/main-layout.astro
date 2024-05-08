@@ -1,0 +1,25 @@
+---
+import "@/styles/globals.css";
+import Navbar from "@/components/navbar";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width"
+		/>
+		<meta
+			name="generator"
+			content={Astro.generator}
+		/>
+		<title>Photo Portfolio</title>
+	</head>
+	<body>
+		<Navbar client:load />
+		<main class="bg-stone-200 -mt-16">
+			<slot />
+		</main>
+	</body>
+</html>
