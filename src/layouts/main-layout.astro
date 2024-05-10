@@ -1,6 +1,6 @@
 ---
 import "@/styles/globals.css";
-import Navbar from "@/components/navbar";
+import {Navbar} from "@/components/navigation/mobile/navbar";
 ---
 
 <html lang="en">
@@ -19,7 +19,7 @@ import Navbar from "@/components/navbar";
 	</head>
 	<body>
 		<Navbar client:load />
-		<main class="bg-stone-200 -mt-16">
+		<main class="bg-zinc-950 -mt-16">
 			<slot />
 		</main>
 	</body>

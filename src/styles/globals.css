@@ -73,7 +73,8 @@
 	body {
 		@apply bg-background text-foreground;
 	}
-    h1 {
-        @apply text-7xl font-bold;
-    }
+	h1 {
+		@apply text-7xl font-bold;
+	}
+
 }
