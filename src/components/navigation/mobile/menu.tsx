@@ -1,24 +1,6 @@
 import { motion } from "framer-motion";
 import { MenuItem } from "./menu-item";
-
-const menuItems = [
-	{
-		name: "Main",
-		link: "#",
-	},
-	{
-		name: "About",
-		link: "#",
-	},
-	{
-		name: "Services",
-		link: "#",
-	},
-	{
-		name: "Contact",
-		link: "#",
-	},
-];
+import { menuItems } from "@/config/nav-items";
 
 const variants = {
 	open: {
@@ -30,8 +12,12 @@ const variants = {
 };
 
 export const Menu = () => {
+
 	return (
-		<motion.ul className="absolute top-16 flex flex-col gap-4" variants={variants}>
+		<motion.ul
+			className="absolute container top-16 flex flex-col gap-4"
+			variants={variants}
+		>
 			{menuItems.map((item, id) => (
 				<MenuItem
 					key={id}

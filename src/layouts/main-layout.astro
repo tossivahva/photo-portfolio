@@ -1,6 +1,6 @@
 ---
 import "@/styles/globals.css";
-import {Navbar} from "@/components/navigation/mobile/navbar";
+import MainNavbar from "@/components/navigation/main-navbar";
 ---
 
 <html lang="en">
@@ -18,8 +18,8 @@ import {Navbar} from "@/components/navigation/mobile/navbar";
 		<title>Photo Portfolio</title>
 	</head>
 	<body>
-		<Navbar client:load />
-		<main class="bg-zinc-950 -mt-16">
+		<MainNavbar client:load />
+		<main class="-mt-16">
 			<slot />
 		</main>
 	</body>

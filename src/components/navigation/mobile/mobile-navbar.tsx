@@ -1,8 +1,8 @@
-import "@/styles/globals.css"
+import "@/styles/globals.css";
 
 import { AnimatePresence, motion, useCycle } from "framer-motion";
-import { Menu } from "../mobile/menu";
-import { MenuToggle } from "../mobile/menu-toggle";
+import { Menu } from "./menu";
+import { MenuToggle } from "./menu-toggle";
 import { useEffect } from "react";
 
 const menuContainer = {
@@ -11,7 +11,7 @@ const menuContainer = {
 		opacity: 1,
 		transition: {
 			type: "spring",
-            stiffness: 200,
+			stiffness: 200,
 			damping: 30,
 			restDelta: 0.01,
 		},
@@ -28,7 +28,7 @@ const menuContainer = {
 	},
 };
 
-export const Navbar = () => {
+export const MobileNavbar = () => {
 	const [isOpen, toggleOpen] = useCycle(false, true);
 
 	useEffect(() => {
@@ -40,22 +40,25 @@ export const Navbar = () => {
 	}, [isOpen]);
 
 	return (
-		<AnimatePresence>
+		<AnimatePresence mode="sync">
 			<motion.nav
-				className="sticky top-0 w-full h-16 bg-zinc-950 inset-0"
+				className="fixed top-0 w-full h-16 inset-0 bg-zinc-900/60 backdrop-blur-xl border-b border-white/10 lg:hidden" 
 				initial={false}
 				animate={isOpen ? "open" : "closed"}
 				exit="closed"
 			>
-				<div className="container mx-auto h-full text-white flex items-center justify-between">
-					<div className="text-2xl">Logo</div>
+				<motion.div className="container mx-auto h-full text-white flex items-center justify-between">
+					<motion.div className="text-2xl">Logo</motion.div>
+
 					<motion.div
-						className="blurred-bottom fixed inset-0 w-full h-screen bg-zinc-900"
+						className="fixed inset-0 w-full h-screen bg-blue-500"
 						variants={menuContainer}
-					/>
-					<Menu />
+					>
+						<Menu />
+					</motion.div>
+
 					<MenuToggle toggle={() => toggleOpen()} />
-				</div>
+				</motion.div>
 			</motion.nav>
 		</AnimatePresence>
 	);
