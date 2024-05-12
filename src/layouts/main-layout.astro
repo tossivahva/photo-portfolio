@@ -1,26 +1,33 @@
 ---
-import "@/styles/globals.css";
-import MainNavbar from "@/components/navigation/main-navbar";
+import '@/styles/globals.css';
+import '@radix-ui/themes/styles.css';
+import MainNavbar from '@/components/navigation/main-navbar';
+import { Theme } from '@radix-ui/themes';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width"
-		/>
-		<meta
-			name="generator"
-			content={Astro.generator}
-		/>
-		<link rel="icon" href="favicon.svg">
-		<title>Photo Portfolio</title>
-	</head>
-	<body>
-		<MainNavbar client:load />
-		<main class="-mt-16">
-			<slot />
-		</main>
-	</body>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'/>
+        <meta
+            name='viewport'
+            content='width=device-width'
+        />
+        <meta
+            name='generator'
+            content={Astro.generator}
+        />
+        <link
+            rel='icon'
+            href='favicon.svg'
+        >
+        <title>Photo Portfolio</title>
+    </head>
+    <body>
+        <Theme>
+            <MainNavbar client:load/>
+            <main>
+                <slot/>
+            </main>
+        </Theme>
+    </body>
 </html>
