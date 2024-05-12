@@ -1,13 +1,13 @@
-import { DesktopNavbar } from "./desktop/desktop-navbar";
-import { MobileNavbar } from "./mobile/mobile-navbar";
+import { DesktopNavbar } from './desktop/desktop-navbar';
+import { MobileNavbar } from './mobile/mobile-navbar';
 
 const MainNavbar = () => {
-	return (
-		<>
-			<DesktopNavbar/>
-			<MobileNavbar/>
-		</>
-	);
+    return (
+        <>
+            <DesktopNavbar/>
+            <MobileNavbar/>
+        </>
+    );
 };
 
 export default MainNavbar;
