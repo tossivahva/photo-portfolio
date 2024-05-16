@@ -22,9 +22,9 @@ const DesktopNavigationMenu = () => {
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className='absolute top-0 left-0 w-full sm:w-auto'>
                         <ul className='m-0 list-none gap-x-[10px] py-3 px-2 sm:w-[220px] sm:grid-flow-col'>
-                            {collections.map((item) => (
+                            {collections.map((item, id) => (
                                 <li
-                                    key={item.name}
+                                    key={id}
                                     className='text-white/70 hover:text-white block select-none rounded-lg px-3 py-2 text-sm font-medium leading-none no-underline outline-none'
                                 >
                                     {item.name}
@@ -35,9 +35,8 @@ const DesktopNavigationMenu = () => {
                 </NavigationMenu.Item>
                 
                 {menuItems.map((item, id) => (
-                    <NavigationMenu.Item>
+                    <NavigationMenu.Item key={id}>
                         <NavigationMenu.Link
-                            key={id}
                             className='text-white/70 hover:text-white group flex select-none items-center justify-between gap-1 rounded-full px-3 py-2 text-sm font-medium leading-none outline-none'
                         >
                             {item.name}
